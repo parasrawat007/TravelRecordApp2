@@ -17,7 +17,16 @@ namespace TravelRecordApp
 
         private void BtnLogin_Clicked(object sender, EventArgs e)
         {
-
+            bool IsEmailEmpty=string.IsNullOrEmpty(EntryEmail.Text);
+            bool IsPasswordEmpty=string.IsNullOrEmpty(EntryPassword.Text);
+            if (IsEmailEmpty||IsPasswordEmpty)
+            { 
+            
+            }
+            else
+            {
+                Navigation.PushAsync(new HomePage());
+            }
         }
     }
 }
